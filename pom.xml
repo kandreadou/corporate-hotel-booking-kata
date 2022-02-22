@@ -139,6 +139,8 @@
 		<!--<version>${junitparams.version}</version>-->
 		<!--<scope>test</scope>-->
 		<!--</dependency>-->
+		<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+
 	</dependencies>
 
 	<build>

@@ -30,4 +30,9 @@ public abstract class AbstractRepository<T> implements Repository<T> {
     public boolean exists(String id) {
         return data.containsKey(id);
     }
+
+    @Override
+    public int count() {
+        return data.size();
+    }
 }

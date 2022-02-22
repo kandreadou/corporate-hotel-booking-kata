@@ -1,10 +1,24 @@
 package com.codurance.service;
 
 import com.codurance.model.Hotel;
+import com.codurance.model.RoomType;
+import com.codurance.repository.HotelRepository;
 
-public interface HotelService {
+public class HotelService {
 
-    void setRoomType(String hotelId, String roomType, int quantity);
+    private HotelRepository repo;
 
-    Hotel findHotelBy(String hotelId);
+    public HotelService(){
+        this.repo = HotelRepository.getInstance();
+    }
+
+    public void setRoomType(String hotelId, RoomType roomType, int quantity) {
+        Hotel h = repo.exists(hotelId) ? repo.get(hotelId): new Hotel(hotelId);
+        h.setRoom(roomType, quantity);
+        repo.save(hotelId, h);
+    }
+
+    public Hotel findHotelBy(String hotelId) {
+        return null;
+    }
 }
