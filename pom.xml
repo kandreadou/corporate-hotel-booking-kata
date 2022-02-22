@@ -149,7 +149,9 @@
 				<version>3.8.0</version>
 				<configuration>
 					<release>11</release>
-				</configuration>
+                    <source>16</source>
+                    <target>16</target>
+                </configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.ow2.asm</groupId>
