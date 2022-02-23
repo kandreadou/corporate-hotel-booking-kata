@@ -19,6 +19,6 @@ public class HotelService {
     }
 
     public Hotel findHotelBy(String hotelId) {
-        return null;
+        return repo.exists(hotelId) ? repo.get(hotelId): null;
     }
 }
