@@ -9,4 +9,12 @@ public class Employee {
         this.id = id;
         this.companyId = companyId;
     }
+
+    public String getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
+    }
 }
